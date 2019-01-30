@@ -27,7 +27,7 @@ git version 2.12.2.windows.1
 值得注意的是：
 
 - 在国内网络下直接下载Windows的地址可能速度比较慢。**建议有条件的同学使用代理，或者使用迅雷会员账号进行加速下载**。
-- git-bash：windows用户由于其极其捉急的cmd，所以我们建议使用git bash来进行命令行操作(powershell也ok)，git bash就是安装git时自带的的bash命令行工具，安装时勾选对应选项即可。
+- git-bash：windows用户由于其极其捉急的cmd，所以我们建议使用git bash来进行命令行操作(powershell也ok)，git bash就是安装git时自带的的bash命令行工具，安装时勾选对应选项即可安装，在资源管理器内或桌面右键`Git Bash Here`即可开始使用。
 
 #### Linux环境
 
@@ -76,7 +76,7 @@ git config --global user.email "my_email@buaa.edu.cn"
 
 - 工作区，暂存区，本地仓库，远程仓库
 
-  ![git stream](/Users/nyz/Desktop/git/git stream.png)
+  ![git stream](http://misaka-oss.oss-cn-beijing.aliyuncs.com/cs/oo_assistant_files/git-guide/git-structure.png)
 
 ------
 
@@ -122,7 +122,7 @@ P.P.P.S：本指南中只讲到了部分git命令的部分使用方法，主要�
 
 5. fork机制。（多人协作）
 
-   (TODO: Swain)
+   (TODO: Swain) 正在施工中，敬请期待
 
 ### 提交
 
@@ -249,7 +249,7 @@ P.P.P.S：本指南中只讲到了部分git命令的部分使用方法，主要�
 
   处理方法：
 
-  ​	这里首先使用**git log**命令（后文有详细叙述）查看上一次提交的commit id，然后复制这个id并执行**git reset \<commit id>**命令，即可回退到上一次commit的内容，这次commit提交的内容不会丢失，而是会被标记为未添加到暂存区的修改，需要重新从**git add**开始
+  	这里首先使用**git log**命令（后文有详细叙述）查看上一次提交的commit id，然后复制这个id并执行**git reset \<commit id>**命令，即可回退到上一次commit的内容，这次commit提交的内容不会丢失，而是会被标记为未添加到暂存区的修改，需要重新从**git add**开始
 
   ```bash
   Swain:~/git-guide$ git log
@@ -294,7 +294,7 @@ P.P.P.S：本指南中只讲到了部分git命令的部分使用方法，主要�
 
 #### 3. 将本地修改从本地仓库提交到远程服务器仓库(git push)
 
-​	之前我们将改动提交到了本地仓库，但是本地仓库只能在本地查看，如果我们希望在其他地方或者让他人查看我们的仓库，就需要将其推送到远程服务器仓库（疯狂push），这时，就该**git push**出场了:
+	之前我们将改动提交到了本地仓库，但是本地仓库只能在本地查看，如果我们希望在其他地方或者让他人查看我们的仓库，就需要将其推送到远程服务器仓库（疯狂push），这时，就该**git push**出场了:
 
 ```bash
 Swain:~/git-guide$ git add README.md 
@@ -310,7 +310,7 @@ To https://gitlab.buaaoo.top/16131059/git-guide.git
    685cede..2ac875d  master -> master
 ```
 
-​	这时，就成功将本地仓库推送到远程仓库。我们这里只讲了git push最简单粗暴的用法，关于其负责用法和push失败如何解决的问题，将在之后逐渐添加。
+	这时，就成功将本地仓库推送到远程仓库。我们这里只讲了git push最简单粗暴的用法，关于其负责用法和push失败如何解决的问题，将在之后逐渐添加。
 
 (TODO: Swain) **git push \<remove> \<branch>**
 
@@ -318,7 +318,7 @@ To https://gitlab.buaaoo.top/16131059/git-guide.git
 
 ### 获取  
 
-​	**git push**是本地仓库到远程仓库，那么如果远程仓库有更新，我们如何将其同步到本地仓库，这里就需要**git pull**和**git fetch**命令了
+	**git push**是本地仓库到远程仓库，那么如果远程仓库有更新，我们如何将其同步到本地仓库，这里就需要**git pull**和**git fetch**命令了
 
 #### 1. **git fetch**
 
@@ -460,11 +460,11 @@ git一般不允许提交大文件（几十MB及以上），如果必须有这样
 
 登录完毕后，进入主页面，点击`Create project`
 
-![1548777053471](/Users/nyz/Library/Containers/com.tencent.xinWeChat/Data/Library/Application%20Support/com.tencent.xinWeChat/2.0b4.0.9/d54ba9d2457126d482babda632efef0a/Message/MessageTemp/9e20f478899dc29eb19741386f9343c8/File/gitlab%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/assets/1548777053471.png)
+![1548777053471](http://misaka-oss.oss-cn-beijing.aliyuncs.com/cs/oo_assistant_files/git-guide/git-guide-create-project.png)
 
 点击后进入创建项目页面
 
-![1548777069962](/Users/nyz/Library/Containers/com.tencent.xinWeChat/Data/Library/Application%20Support/com.tencent.xinWeChat/2.0b4.0.9/d54ba9d2457126d482babda632efef0a/Message/MessageTemp/9e20f478899dc29eb19741386f9343c8/File/gitlab%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/assets/1548777069962.png)
+![1548777069962](http://misaka-oss.oss-cn-beijing.aliyuncs.com/cs/oo_assistant_files/git-guide/git-guide-create-page.png)
 
 我们**主要需要填写的部分是红色框的部分，即项目名**。填写后蓝色框部分会自动与之同步，我们一般不去管它即可。**一般情况下，建议项目名采用减号分隔的的小写字符串（部分情况下使用下划线也可）**。
 
@@ -474,11 +474,11 @@ git一般不允许提交大文件（几十MB及以上），如果必须有这样
 
 就像这样
 
-![1548777222742](/Users/nyz/Library/Containers/com.tencent.xinWeChat/Data/Library/Application%20Support/com.tencent.xinWeChat/2.0b4.0.9/d54ba9d2457126d482babda632efef0a/Message/MessageTemp/9e20f478899dc29eb19741386f9343c8/File/gitlab%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/assets/1548777222742.png)
+![1548777222742](http://misaka-oss.oss-cn-beijing.aliyuncs.com/cs/oo_assistant_files/git-guide/git-guide-create-page-2.png)
 
 之后我们点击`Create project`。
 
-![1548777252388](/Users/nyz/Library/Containers/com.tencent.xinWeChat/Data/Library/Application%20Support/com.tencent.xinWeChat/2.0b4.0.9/d54ba9d2457126d482babda632efef0a/Message/MessageTemp/9e20f478899dc29eb19741386f9343c8/File/gitlab%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/assets/1548777252388.png)
+![1548777252388](http://misaka-oss.oss-cn-beijing.aliyuncs.com/cs/oo_assistant_files/git-guide/git-guide-project-page.png)
 
 现在可以看到，一个在线项目创建完毕。
 
@@ -521,23 +521,23 @@ To git@gitlab.com:HansBug/my-greatest-project.git
 
 之后，我们就可以看到gitlab在线仓库上已经出现了我们的代码。
 
-![1548778280537](/Users/nyz/Library/Containers/com.tencent.xinWeChat/Data/Library/Application%20Support/com.tencent.xinWeChat/2.0b4.0.9/d54ba9d2457126d482babda632efef0a/Message/MessageTemp/9e20f478899dc29eb19741386f9343c8/File/gitlab%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/assets/1548778280537.png)
+![1548778280537](http://misaka-oss.oss-cn-beijing.aliyuncs.com/cs/oo_assistant_files/git-guide/git-guide-project-page-2.png)
 
 ### 比较两次commit的改动
 
 在项目页面上，点击`Repository`（仓库）--> `Compare`（比较）。
 
-![1548780139444](/Users/nyz/Library/Containers/com.tencent.xinWeChat/Data/Library/Application%20Support/com.tencent.xinWeChat/2.0b4.0.9/d54ba9d2457126d482babda632efef0a/Message/MessageTemp/9e20f478899dc29eb19741386f9343c8/File/gitlab%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/assets/1548780139444.png)
+![1548780139444](http://misaka-oss.oss-cn-beijing.aliyuncs.com/cs/oo_assistant_files/git-guide/git-guide-compare-page.png)
 
 在`Source`栏填写对比的源版本号（或者分支名称），在`Target`栏填写对比的目标版本号（或者分支名称）。
 
-![1548780189760](/Users/nyz/Library/Containers/com.tencent.xinWeChat/Data/Library/Application%20Support/com.tencent.xinWeChat/2.0b4.0.9/d54ba9d2457126d482babda632efef0a/Message/MessageTemp/9e20f478899dc29eb19741386f9343c8/File/gitlab%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/assets/1548780189760.png)
+![1548780189760](http://misaka-oss.oss-cn-beijing.aliyuncs.com/cs/oo_assistant_files/git-guide/git-guide-compare-page-2.png)
 
 点击`Compare`，即可看到对比结果。
 
 对比结果的意思是，从`Target`所在的版本到`Source`所在的版本的代码变更状况。包括增加了哪些信息，删除了哪些信息，共计有过哪些提交等。
 
-![1548780322446](/Users/nyz/Library/Containers/com.tencent.xinWeChat/Data/Library/Application%20Support/com.tencent.xinWeChat/2.0b4.0.9/d54ba9d2457126d482babda632efef0a/Message/MessageTemp/9e20f478899dc29eb19741386f9343c8/File/gitlab%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/assets/1548780322446.png)
+![1548780322446](http://misaka-oss.oss-cn-beijing.aliyuncs.com/cs/oo_assistant_files/git-guide/git-guide-compare-page-result.png)
 
 ### SSH配置
 
@@ -557,27 +557,27 @@ ssh-keygen
 
 全过程如图（部分细节可能并不一样，如生成的图样、公钥内容等）
 
-![1548778798922](/Users/nyz/Library/Containers/com.tencent.xinWeChat/Data/Library/Application%20Support/com.tencent.xinWeChat/2.0b4.0.9/d54ba9d2457126d482babda632efef0a/Message/MessageTemp/9e20f478899dc29eb19741386f9343c8/File/gitlab%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/assets/1548778798922.png)
+![1548778798922](http://misaka-oss.oss-cn-beijing.aliyuncs.com/cs/oo_assistant_files/git-guide/git-guide-git-bash-ssh.png)
 
 然后，将这个`id_rsa.pub`文件内的内容（rsa公钥），添加到平台上。
 
 首先进入右上角用户的`Settings`页面，然后进入`SSH Keys`页面。
 
-![1548778936214](/Users/nyz/Library/Containers/com.tencent.xinWeChat/Data/Library/Application%20Support/com.tencent.xinWeChat/2.0b4.0.9/d54ba9d2457126d482babda632efef0a/Message/MessageTemp/9e20f478899dc29eb19741386f9343c8/File/gitlab%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/assets/1548778936214.png)
+![1548778936214](http://misaka-oss.oss-cn-beijing.aliyuncs.com/cs/oo_assistant_files/git-guide/git-guide-add-ssh-page.png)
 
 **红色框的部分表示公钥信息，需要我们手动填写**。
 
 蓝色框的部分表示公钥标题，一般情况下会根据公钥信息自动生成，如果没有自动生成，则需要我们手动填写。
 
-![1548778830317](/Users/nyz/Library/Containers/com.tencent.xinWeChat/Data/Library/Application%20Support/com.tencent.xinWeChat/2.0b4.0.9/d54ba9d2457126d482babda632efef0a/Message/MessageTemp/9e20f478899dc29eb19741386f9343c8/File/gitlab%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/assets/1548778830317.png)
+![1548778830317](http://misaka-oss.oss-cn-beijing.aliyuncs.com/cs/oo_assistant_files/git-guide/git-guide-add-ssh-page-2.png)
 
 填写完毕后点击`Add key`即可。
 
-![1548779608992](/Users/nyz/Library/Containers/com.tencent.xinWeChat/Data/Library/Application%20Support/com.tencent.xinWeChat/2.0b4.0.9/d54ba9d2457126d482babda632efef0a/Message/MessageTemp/9e20f478899dc29eb19741386f9343c8/File/gitlab%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/assets/1548779608992.png)
+![1548779608992](http://misaka-oss.oss-cn-beijing.aliyuncs.com/cs/oo_assistant_files/git-guide/git-guide-added-ssh.png)
 
 在此之后，我们就能在使用了此默认ssh key的电脑上进行全程无密码的远程git操作了。
 
-不过值得注意的是，一般来说对于同一个公钥，在同一个网站上，只能被同一个用户使用。
+不过值得注意的是，**一般来说对于同一个公钥，在同一个网站上，只能同时被一个用户使用**。
 
 
 
@@ -590,7 +590,7 @@ ssh-keygen
 
 ​	**如果对本指南有任何问题和建议，欢迎联系作者**
 
-​	**email: niuyazhe@buaa.edu.cn**
+​	**email: niuyazhe@buaa.edu.cn、hansbug@questionor.cn**
 
-​	**github repo: https://github.com/OO-guide-2019/git-guide**
+	**github repo: https://github.com/OO-guide-2019/git-guide**
 
